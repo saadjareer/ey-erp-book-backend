@@ -30,8 +30,6 @@ public class BookServiceTests {
         int expected_booksListSize = 4;
 
         Assertions.assertEquals(actual_booksListSize, expected_booksListSize);
-
-
     }
-    
+
 }
