@@ -31,7 +31,7 @@ public class BookServiceTests {
 
         Assertions.assertEquals(actual_booksListSize, expected_booksListSize);
 
-
+        // where are the spaces
     }
     
 }
