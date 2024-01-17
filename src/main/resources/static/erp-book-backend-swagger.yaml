@@ -1,0 +1,43 @@
+openapi: 3.0.3
+info:
+  title: KAFD - ERP Book Backend Application
+  description: KAFD - ERP Book Backend Application
+  version: 1.0.0
+  contact:
+    name: Saad Jareer
+    email: saadjareer@gmail.com
+servers:
+  - url: 'localhost:9090/erp/api/v1'
+    description: LOCAL Environment
+paths:
+  /book/{bookId}:
+    get:
+      tags:
+        - Book
+      summary: Get Book by bookID
+      description: Use this API endpoint to Book by BookID
+      parameters:
+        - name: bookId
+          in: path
+          required: true
+          schema:
+            type: number
+      responses:
+        "200":
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/GenericResponse"
+components:
+  schemas:
+    GenericResponse:
+      type: object
+      properties:
+        responseCode:
+          type: string
+        responseMessage:
+          type: string
+        responseBody:
+          type: object
+
